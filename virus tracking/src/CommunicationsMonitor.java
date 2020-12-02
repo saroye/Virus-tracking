@@ -25,7 +25,7 @@ public class CommunicationsMonitor
 		SortedByTime = new LinkedList<ComputerNode>();
 		triples = new ArrayList <Triples>();
 		hmap = new HashMap<Integer, List<ComputerNode>>();
-		
+
 		queue = new LinkedList<ComputerNode>();
 
 		size =0;
@@ -128,7 +128,7 @@ public class CommunicationsMonitor
 			s = queue.poll();
 			System.out.print(s.getID()+ " ");
 			Iterator<ComputerNode> i = s.getOutNeighbours().listIterator();
-			
+
 			while (i.hasNext()) 
 			{ 
 				ComputerNode n = i.next(); 
@@ -136,10 +136,10 @@ public class CommunicationsMonitor
 				{ 
 					visited[n.getID()] = true; 
 					queue.add(n); 
-					
+
 				}
 			}
-			
+
 		}
 
 	}
@@ -315,26 +315,26 @@ public class CommunicationsMonitor
 		cc.addCommunication(3, 4, 8);
 		cc.getComputerMapping();
 		cc.createGraph(cc, cc.SortedByTime.get(0) );
-		// l.get(leftIdx).getTime() < r.get(rightIdx).getTime()
-
-		//System.out.println("size of list "+ list.size());
-		//cc.getComputerMapping();
-		//		for(int i =0; i<list.size(); i++) {
-		//			//System.out.println("ID: "+ list.get(i).getID()+" time stamp: "+list.get(i).getTimestamp());
-		//		}
-		//		//System.out.println("------------------------");
-		//		for(int i =0; i<list.size(); i++) 
-		//		{
-		//			System.out.println("sorted ID: "+ SortedByTime.get(i).getID()+" D's time stamp: "+SortedByTime.get(i).getTimestamp());	
-		//		}
-		//			ComputerNode n = SortedByTime.get(4).next;
-		//		if(SortedByTime.get(2).next.next!=null)
-		//		{
-		//			System.out.println("next ID:  "+ SortedByTime.get(2).next.next.getID()+"  next time: "+SortedByTime.get(2).next.next.getTimestamp());
-		//		}
-		//else {System.out.println("next is still null");}
-		//System.out.println("last "+ list.getLast().getID()+ " time: "+ list.getLast().getTimestamp());
-		//System.out.println("previous of last "+ list.getLast().prev.getID()+ " time: "+ list.getLast().prev.getTimestamp());
+//		l.get(leftIdx).getTime() < r.get(rightIdx).getTime();
+//
+//		System.out.println("size of list "+ list.size());
+//		cc.getComputerMapping();
+//		for(int i =0; i<list.size(); i++) {
+//			System.out.println("ID: "+ list.get(i).getID()+" time stamp: "+list.get(i).getTimestamp());
+//		}
+//		System.out.println("------------------------");
+//		for(int i =0; i<list.size(); i++) 
+//		{
+//			System.out.println("sorted ID: "+ SortedByTime.get(i).getID()+" D's time stamp: "+SortedByTime.get(i).getTimestamp());	
+//		}
+//		ComputerNode n = SortedByTime.get(4).next;
+//		if(SortedByTime.get(2).next.next!=null)
+//		{
+//			System.out.println("next ID:  "+ SortedByTime.get(2).next.next.getID()+"  next time: "+SortedByTime.get(2).next.next.getTimestamp());
+//		}
+//		else {System.out.println("next is still null");}
+//		System.out.println("last "+ list.getLast().getID()+ " time: "+ list.getLast().getTimestamp());
+//		System.out.println("previous of last "+ list.getLast().prev.getID()+ " time: "+ list.getLast().prev.getTimestamp());
 
 	}
 }
